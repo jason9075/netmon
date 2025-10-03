@@ -1,0 +1,13 @@
+services:
+  netmon:
+    build: .
+    container_name: netmon
+    restart: unless-stopped
+    environment:
+      # 可調整；預設 10 秒一次、逾時 2 秒
+      URL: 'https://www.google.com/generate_204'
+      INTERVAL_SECONDS: '10'
+      TIMEOUT_SECONDS: '2'
+      LOG_PATH: '/data/netlog.log'
+    volumes:
+      - ./data:/data
