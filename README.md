@@ -9,3 +9,11 @@ make run   # 建置並以 Docker Compose 背景啟動
 make logs  # 觀察即時輸出
 make stop  # 關閉容器
 ```
+
+netlog.lgo example
+
+```bash
+2025-10-03T06:44:35Z,true,55,<nil>
+2025-10-03T06:44:45Z,true,3,<nil>
+2025-10-03T06:44:55Z,false,xxxxxxxx
+```
