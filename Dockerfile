@@ -31,9 +31,7 @@ RUN if [ "$TARGETARCH" = "arm" ] && [ -n "$TARGETVARIANT" ]; then \
 # Runner（distroless 更精簡也可）
 ########################################
 FROM alpine:3.20
-RUN apk add --no-cache ca-certificates tzdata && \
-    adduser -D -H -u 10001 app
-USER app
+RUN apk add --no-cache ca-certificates tzdata
 WORKDIR /app
 
 COPY --from=builder /out/netmon /app/netmon
